@@ -12,8 +12,8 @@ afterEach(() => {
   nock.cleanAll();
 });
 
-const org: string = 'rust-lang';
-const repo: string = 'mdbook';
+const org: string = 'rxdn';
+const repo: string = 'mdbook-sitemap-generator';
 const urlBrewExpected: string = `https://formulae.brew.sh/api/formula/${repo}.json`;
 const urlGithubExpected: string = `https://api.github.com/repos/${org}/${repo}/releases/latest`;
 
