@@ -36,11 +36,11 @@ describe('Integration testing run()', () => {
 
   if (process.platform === 'linux') {
     test('fail to install a custom version due to 404 of tarball', async () => {
-      const testVersion: string = '0.3.4';
+      const testVersion: string = '0.1.0';
       process.env['INPUT_MDBOOK-VERSION'] = testVersion;
       nock('https://github.com')
         .get(
-          `/rust-lang/mdBook/releases/download/v${testVersion}/mdbook-v${testVersion}-x86_64-unknown-linux-gnu.tar.gz`
+          `/rxdn/mdbook-sitemap-generator/releases/download/v${testVersion}/mdbook-sitemap-generator-x86_64-unknown-linux-gnu.tar.gz`
         )
         .reply(404);
       try {
@@ -75,7 +75,7 @@ describe('Integration testing run()', () => {
         .reply(200, jsonTestBrew);
       nock('https://github.com')
         .get(
-          `/rust-lang/mdBook/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-unknown-linux-gnu.tar.gz`
+          `/rxdn/mdbook-sitemap-generator/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-unknown-linux-gnu.tar.gz`
         )
         .reply(404);
       try {

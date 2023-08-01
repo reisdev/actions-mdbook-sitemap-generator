@@ -1,8 +1,8 @@
 {
-  "url": "https://api.github.com/repos/rust-lang/mdBook/releases/21381829",
-  "assets_url": "https://api.github.com/repos/rust-lang/mdBook/releases/21381829/assets",
-  "upload_url": "https://uploads.github.com/repos/rust-lang/mdBook/releases/21381829/assets{?name,label}",
-  "html_url": "https://github.com/rust-lang/mdBook/releases/tag/v0.3.5",
+  "url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/releases/21381829",
+  "assets_url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/releases/21381829/assets",
+  "upload_url": "https://uploads.github.com/repos/rxdn/mdbook-sitemap-generator/releases/21381829/assets{?name,label}",
+  "html_url": "https://github.com/rxdn/mdbook-sitemap-generator/releases/tag/v0.3.5",
   "id": 21381829,
   "node_id": "MDc6UmVsZWFzZTIxMzgxODI5",
   "tag_name": "v0.3.5",
@@ -34,7 +34,7 @@
   "published_at": "2019-11-11T21:37:26Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/rust-lang/mdBook/releases/assets/16096171",
+      "url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/releases/assets/16096171",
       "id": 16096171,
       "node_id": "MDEyOlJlbGVhc2VBc3NldDE2MDk2MTcx",
       "name": "mdbook-v0.3.5-x86_64-apple-darwin.tar.gz",
@@ -65,10 +65,10 @@
       "download_count": 212,
       "created_at": "2019-11-11T21:44:16Z",
       "updated_at": "2019-11-11T21:44:17Z",
-      "browser_download_url": "https://github.com/rust-lang/mdBook/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-apple-darwin.tar.gz"
+      "browser_download_url": "https://github.com/rxdn/mdbook-sitemap-generator/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-apple-darwin.tar.gz"
     },
     {
-      "url": "https://api.github.com/repos/rust-lang/mdBook/releases/assets/16096347",
+      "url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/releases/assets/16096347",
       "id": 16096347,
       "node_id": "MDEyOlJlbGVhc2VBc3NldDE2MDk2MzQ3",
       "name": "mdbook-v0.3.5-x86_64-pc-windows-msvc.zip",
@@ -99,10 +99,10 @@
       "download_count": 283,
       "created_at": "2019-11-11T21:52:53Z",
       "updated_at": "2019-11-11T21:52:53Z",
-      "browser_download_url": "https://github.com/rust-lang/mdBook/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-pc-windows-msvc.zip"
+      "browser_download_url": "https://github.com/rxdn/mdbook-sitemap-generator/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-pc-windows-msvc.zip"
     },
     {
-      "url": "https://api.github.com/repos/rust-lang/mdBook/releases/assets/16096247",
+      "url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/releases/assets/16096247",
       "id": 16096247,
       "node_id": "MDEyOlJlbGVhc2VBc3NldDE2MDk2MjQ3",
       "name": "mdbook-v0.3.5-x86_64-unknown-linux-gnu.tar.gz",
@@ -133,10 +133,10 @@
       "download_count": 2131,
       "created_at": "2019-11-11T21:48:20Z",
       "updated_at": "2019-11-11T21:48:21Z",
-      "browser_download_url": "https://github.com/rust-lang/mdBook/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-unknown-linux-gnu.tar.gz"
+      "browser_download_url": "https://github.com/rxdn/mdbook-sitemap-generator/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-unknown-linux-gnu.tar.gz"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/rust-lang/mdBook/tarball/v0.3.5",
-  "zipball_url": "https://api.github.com/repos/rust-lang/mdBook/zipball/v0.3.5",
+  "tarball_url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/tarball/v0.3.5",
+  "zipball_url": "https://api.github.com/repos/rxdn/mdbook-sitemap-generator/zipball/v0.3.5",
   "body": "See https://github.com/rust-lang-nursery/mdBook/blob/master/CHANGELOG.md#mdbook-035 for a complete list of changes."
 }
