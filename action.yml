@@ -1,14 +1,6 @@
 name: 'mdBook Sitemap Generator Action'
-description: 'GitHub Action to generate a Sitemap for you mdBook'
+description: 'GitHub Action to setup mdbook-sitemap-generator'
 author: 'reisdev'
-inputs:
-  domain:
-    description: 'The domain for you sitemap'
-    required: true
-  output:
-    description: 'The destination for you sitemap file'
-    required: false
-    default: 'book/sitemap.xml'
 runs:
   using: 'node16'
   main: 'lib/index.js'

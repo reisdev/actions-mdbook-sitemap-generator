@@ -50,13 +50,8 @@ export async function run(): Promise<any> {
     await installer(pkgVersion);
 
     core.info(`mdbook-sitemap-generator version: ${pkgVersion}`);
-    
-    let args: string[] = [
-	    `-o ${core.getInput('output')}`,
-      `-d ${core.getInput('domain')}`
-    ];
 
-    result = await runCommand('mdbook-sitemap-generator', args);
+    result = await runCommand('mdbook-sitemap-generator', ['--version']);
 
     return result;
   } catch (e) {
