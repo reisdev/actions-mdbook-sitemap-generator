@@ -1,14 +1,17 @@
-name: 'mdBook Action'
-description: 'GitHub Actions for mdBook ⚡️ Setup mdBook quickly and build your site fast.'
-author: 'peaceiris'
+name: 'mdBook Sitemap Generator Action'
+description: 'GitHub Action to generate a Sitemap for you mdBook'
+author: 'reisdev'
 inputs:
-  mdbook-version:
-    description: 'The mdBook version to download (if necessary) and use. Example: 0.3.5'
+  domain:
+    description: 'The domain for you sitemap'
+    required: true
+  output:
+    description: 'The destination for you sitemap file'
     required: false
-    default: 'latest'
+    default: 'book/sitemap.xml'
 runs:
   using: 'node16'
   main: 'lib/index.js'
 branding:
-  icon: 'book-open'
-  color: 'yellow'
+  icon: 'globe'
+  color: 'orange'

@@ -8,7 +8,7 @@ export interface actionResult {
   output: string;
 }
 
-export async function showVersion(
+export async function runCommand(
   cmd: string,
   args: string[]
 ): Promise<actionResult> {
@@ -40,23 +40,23 @@ export async function showVersion(
 // most @actions toolkit packages have async methods
 export async function run(): Promise<any> {
   try {
-    let toolVersion: string = core.getInput('mdbook-version');
-    let installVersion: string = '';
-
     let result: actionResult = {
       exitcode: 0,
       output: ''
     };
 
-    if (toolVersion === '' || toolVersion === 'latest') {
-      installVersion = await getLatestVersion('rust-lang', 'mdbook', 'brew');
-    } else {
-      installVersion = toolVersion;
-    }
+    let pkgVersion: string =  await getLatestVersion('rxdn', 'mdbook-sitemap-generator', 'github');
 
-    core.info(`mdbook version: ${installVersion}`);
-    await installer(installVersion);
-    result = await showVersion('mdbook', ['--version']);
+    await installer(pkgVersion);
+
+    core.info(`mdbook-sitemap-generator version: ${pkgVersion}`);
+    
+    let args: string[] = [
+	    `-o ${core.getInput('output')}`,
+      `-d ${core.getInput('domain')}`
+    ];
+
+    result = await runCommand('mdbook-sitemap-generator', args);
 
     return result;
   } catch (e) {
