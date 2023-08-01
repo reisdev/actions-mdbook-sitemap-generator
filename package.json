@@ -1,6 +1,6 @@
 {
   "name": "actions-mdbook-sitemap-generator",
-  "version": "0.1.2-alpha",
+  "version": "0.1.2-alpha.0",
   "description": "GitHub Action to setup mdbook-sitemap-generator",
   "main": "lib/index.js",
   "scripts": {
