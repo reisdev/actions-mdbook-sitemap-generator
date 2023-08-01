@@ -53,13 +53,13 @@ export async function installer(version: string) {
       toolAssets,
       tempDir
     );
-    toolBin = `${toolExtractedFolder}/mdbook.exe`;
+    toolBin = `${toolExtractedFolder}/mdbook-sitemap-generator.exe`;
   } else {
     const toolExtractedFolder: string = await tc.extractTar(
       toolAssets,
       tempDir
     );
-    toolBin = `${toolExtractedFolder}/mdbook`;
+    toolBin = `${toolExtractedFolder}/mdbook-sitemap-generator`;
   }
   await io.mv(toolBin, toolPath);
 }
