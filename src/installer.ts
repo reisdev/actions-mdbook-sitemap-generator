@@ -47,5 +47,7 @@ export async function installer(version: string) {
   // Download and extract mdbook-sitemap-generator binary
   const toolAssets: string = await tc.downloadTool(toolURL);
 
-  await io.mv(toolAssets, toolPath);
+  const toolExecutable: string = path.join(toolPath, "mdbook-sitemap-generator");
+
+  await io.mv(toolAssets, toolExecutable);
 }
