@@ -18,29 +18,24 @@ afterEach(() => {
 
 describe('Integration testing run()', () => {
   test('succeed in installing a custom version', async () => {
-    const testVersion: string = '0.3.4';
-    process.env['INPUT_MDBOOK-VERSION'] = testVersion;
     const result: main.actionResult = await main.run();
-    expect(result.output).toMatch(`mdbook v${testVersion}`);
+    expect(result.output.split("\n")[0]).toMatch(`mdbook-sitemap-generator`);
   });
 
   test('succeed in installing the latest version', async () => {
-    const testVersion: string = 'latest';
-    process.env['INPUT_MDBOOK-VERSION'] = testVersion;
     nock('https://formulae.brew.sh')
       .get(`/api/formula/${repo}.json`)
       .reply(200, jsonTestBrew);
     const result: main.actionResult = await main.run();
-    expect(result.output).toMatch('mdbook v0.3.5');
+    expect(result.output.split("\n")[0]).toMatch('mdbook-sitemap-generator');
   });
 
   if (process.platform === 'linux') {
     test('fail to install a custom version due to 404 of tarball', async () => {
-      const testVersion: string = '0.1.0';
-      process.env['INPUT_MDBOOK-VERSION'] = testVersion;
+      const testVersion: string = '0.2.0';
       nock('https://github.com')
         .get(
-          `/rxdn/mdbook-sitemap-generator/releases/download/v${testVersion}/mdbook-sitemap-generator-x86_64-unknown-linux-gnu.tar.gz`
+          `/rxdn/mdbook-sitemap-generator/releases/download/v${testVersion}/mdbook-sitemap-generator-x86_64-unknown-linux-gnu`
         )
         .reply(404);
       try {
@@ -54,7 +49,6 @@ describe('Integration testing run()', () => {
 
   test('fail to install the latest version due to 404 of brew.sh', async () => {
     const testVersion: string = 'latest';
-    process.env['INPUT_MDBOOK-VERSION'] = testVersion;
     nock('https://formulae.brew.sh')
       .get(`/api/formula/${repo}.json`)
       .reply(404);
@@ -75,7 +69,7 @@ describe('Integration testing run()', () => {
         .reply(200, jsonTestBrew);
       nock('https://github.com')
         .get(
-          `/rxdn/mdbook-sitemap-generator/releases/download/v0.3.5/mdbook-v0.3.5-x86_64-unknown-linux-gnu.tar.gz`
+          `/rxdn/mdbook-sitemap-generator/releases/download/v0.1.0/mdbook-sitemap-generator-x86_64-unknown-linux-gnu`
         )
         .reply(404);
       try {
@@ -88,21 +82,21 @@ describe('Integration testing run()', () => {
   }
 });
 
-describe('showVersion()', () => {
+describe('runCommand()', () => {
   let result: main.actionResult = {
     exitcode: 0,
     output: ''
   };
 
   test('return version', async () => {
-    result = await main.showVersion('git', ['--version']);
+    result = await main.runCommand('git', ['--version']);
     expect(result.exitcode).toBe(0);
     expect(result.output).toMatch(/git version/);
   });
 
   test('return exception', async () => {
     try {
-      result = await main.showVersion('gitgit', ['--version']);
+      result = await main.runCommand('gitgit', ['--version']);
     } catch (e) {
       expect(e).toThrow(Error);
     }

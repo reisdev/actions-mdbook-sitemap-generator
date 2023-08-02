@@ -33,7 +33,10 @@ export async function runCommand(
     `);
     return result;
   } catch (e) {
-    return e;
+    return {
+      exitcode: 1,
+      output: (e as Error).message
+    };
   }
 }
 
@@ -45,13 +48,17 @@ export async function run(): Promise<any> {
       output: ''
     };
 
-    let pkgVersion: string =  await getLatestVersion('rxdn', 'mdbook-sitemap-generator', 'github');
+    let pkgVersion: string = await getLatestVersion(
+      'rxdn',
+      'mdbook-sitemap-generator',
+      'github'
+    );
 
     await installer(pkgVersion);
 
     core.info(`mdbook-sitemap-generator version: ${pkgVersion}`);
 
-    result = await runCommand('mdbook-sitemap-generator', ['--version']);
+    result = await runCommand('mdbook-sitemap-generator', ['--help']);
 
     return result;
   } catch (e) {

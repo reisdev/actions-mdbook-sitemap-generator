@@ -44,22 +44,8 @@ export async function installer(version: string) {
   await io.mkdirP(toolPath);
   core.addPath(toolPath);
 
-  // Download and extract mdbook binary
-  const tempDir: string = await createTempDir(baseLocation);
+  // Download and extract mdbook-sitemap-generator binary
   const toolAssets: string = await tc.downloadTool(toolURL);
-  let toolBin: string = '';
-  if (process.platform === 'win32') {
-    const toolExtractedFolder: string = await tc.extractZip(
-      toolAssets,
-      tempDir
-    );
-    toolBin = `${toolExtractedFolder}/mdbook-sitemap-generator.exe`;
-  } else {
-    const toolExtractedFolder: string = await tc.extractTar(
-      toolAssets,
-      tempDir
-    );
-    toolBin = `${toolExtractedFolder}/mdbook-sitemap-generator`;
-  }
-  await io.mv(toolBin, toolPath);
+
+  await io.mv(toolAssets, toolPath);
 }

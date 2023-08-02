@@ -28,7 +28,7 @@ describe('getURL()', () => {
 });
 
 describe('getLatestVersion()', () => {
-  let versionLatestExpected: string = '0.3.5';
+  let versionLatestExpected: string = '0.1.0';
 
   test('return latest version via brew', async () => {
     nock('https://formulae.brew.sh')
