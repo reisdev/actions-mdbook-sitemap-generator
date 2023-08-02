@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2-alpha.8](https://github.com/peaceiris/actions-mdbook/compare/v0.1.2-alpha.7...v0.1.2-alpha.8) (2023-08-02)
+
+
+### fix
+
+* add permission step to installer ([243b435](https://github.com/peaceiris/actions-mdbook/commit/243b435cd3cf228236ece716f9e1c57f50effb0d))
+
+
+
 ## [0.1.2-alpha.7](https://github.com/peaceiris/actions-mdbook/compare/v0.1.2-alpha.6...v0.1.2-alpha.7) (2023-08-02)
 
 
