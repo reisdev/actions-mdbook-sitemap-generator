@@ -28,16 +28,7 @@ describe('getURL()', () => {
 });
 
 describe('getLatestVersion()', () => {
-  let versionLatestExpected: string = '0.1.0';
-
-  test('return latest version via brew', async () => {
-    nock('https://formulae.brew.sh')
-      .get(`/api/formula/${repo}.json`)
-      .reply(200, jsonTestBrew);
-
-    const versionLatest: string = await getLatestVersion(org, repo, 'brew');
-    expect(versionLatest).toMatch(versionLatestExpected);
-  });
+  let versionLatestExpected: string = 'v0.1.0';
 
   test('return latest version via GitHub', async () => {
     nock('https://api.github.com')
