@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2-alpha.6](https://github.com/peaceiris/actions-mdbook/compare/v0.1.2-alpha.5...v0.1.2-alpha.6) (2023-08-02)
+
+
+### fix
+
+* get url ([cf75418](https://github.com/peaceiris/actions-mdbook/commit/cf754186e8cead5ef1e0e2ea131e2e388dc0dac6))
+
+
+
 ## [0.1.2-alpha.5](https://github.com/peaceiris/actions-mdbook/compare/v0.1.2-alpha.4...v0.1.2-alpha.5) (2023-08-02)
 
 
