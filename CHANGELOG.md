@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2-alpha.7](https://github.com/peaceiris/actions-mdbook/compare/v0.1.2-alpha.6...v0.1.2-alpha.7) (2023-08-02)
+
+
+### fix
+
+* add rename step to installer ([e14ba0d](https://github.com/peaceiris/actions-mdbook/commit/e14ba0ddacae825bf2091ad963d20e1bba3da548))
+
+
+
 ## [0.1.2-alpha.6](https://github.com/peaceiris/actions-mdbook/compare/v0.1.2-alpha.5...v0.1.2-alpha.6) (2023-08-02)
 
 
